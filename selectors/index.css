@@ -1,0 +1,192 @@
+/*  ------------------ priority ------------------------- */
+/* 1.inline 2.internal (hrad) 3.external */
+/* in external */
+/* 1.id   2.class,attribute(hover,disabled)  3.tag 4.order - boottom-last has high 
+/* 5.browser default
+/* 6.inherited-parents (chanfe with style ,font will be others not parents 7.*
+   */ 
+
+   /* First priority for direct elements id,class,tag..
+then last parent,*, */
+/* ------careful combinators inthis manner---- */
+/* to got parents element style priority use inherited in most  direct priority getting place
+ */
+ *{
+     /* to include bordder,padding,(not margin) along with the content height,width
+      */box-sizing: border-box;
+      /* box-sizing: content-box;  default - extra padding,border size will be included */
+     
+ }
+
+   body{
+       background-color:white;
+       margin: 0px;
+   }
+section {
+    font-family:sans-serif;
+    color:white
+    
+}
+
+/* main{
+    height: 500px;
+} */
+
+#one{
+
+    background: url("nature.jpg");
+    /* width height willbe percentage of the container it include-father */
+    width: 100%;
+    height: 528px;
+    padding: 10px;
+    /* border: solid 5px black;
+    margin: 10px 0px; */
+    /* font-family: fantasy; */
+    
+}
+#two {
+    background-color: gray;
+    /* border:10px solid black;
+    margin: 5px 20px; */
+    /* font-family: inherit; */
+}
+
+
+.section-title{
+    background-color: inherit;
+}
+h1 {
+    background-color:violet;
+}
+
+#one h1{
+    
+    margin: 20px;
+}
+
+.main-header{
+    background-color: rgb(22, 197, 236);
+    width: 100%;
+    padding: 10px 20px;
+}
+
+
+.main-header > div{
+    display: inline-block;
+}
+
+.main-header__brand{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    vertical-align: middle;
+    color:gray;
+    
+}
+
+.main-nav{
+    display: inline-block;
+    text-align: right;
+    width:calc(100% - 95px);
+    vertical-align: middle;
+
+}
+.main-nav__items{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 15px;
+    
+}
+
+.main-nav__item a{
+    text-decoration: none;
+    color:gray;
+    font-weight: bold;
+    padding: 3px 0;
+}
+/* add a .after all the nav items a
+.main-nav__item a::after{
+    content: ".";
+} */
+.main-nav__item a:hover,
+.main-nav__items a:active{
+    text-decoration: none;
+    color:white;
+    border-bottom: 3px solid gray;
+}
+
+a.initial{
+    text-decoration: none;
+    color:white;
+    border-bottom: 3px solid gray;
+
+}
+
+p::first-letter{
+    font-weight: bold;
+    color: #000;
+
+}
+
+.main-nav__item--cta a{
+    color:rgb(22, 197, 236);
+    background-color: gray;
+    
+    
+ 
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active{
+    color:rgb(22, 197, 236);
+    background-color: white;
+    
+    border: none;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----combinator */
+/* 1.+  div + p -afsal,ansil,  adjacent siblings*/
+/* 2.~   div ~ p  afsal,anshad   any sibling */
+/* 3.>  div < p  vellippa,uppa  -direct childen not parakkutti */
+/* 3.   div p normal all childern of a parent ,vellippa,njan
+ */
+
+
+
+
+
+
+
+
